@@ -17,12 +17,16 @@ import com.example.controller_advice.exception.MyExampleException;
 public class ExampleService {
 
 	public void throwNullPointerException() {
-
-		throw new NullPointerException("Ocurre un null pointer exception");
+		if (null == null) {
+			throw new NullPointerException("Ocurre un null pointer exception");
+		}
 
 	}
 
-	public void throwMyExampleException() throws MyExampleException{
-		throw new MyExampleException("Ocurrio un error de tipo MyExampleException");
+	public void throwMyExampleException() throws MyExampleException {
+		if (1 != 2) {
+			throw new MyExampleException("Ocurrio un error de tipo MyExampleException");
+		}
+
 	}
 }
